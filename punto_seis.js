@@ -11,7 +11,6 @@ function generarCodigos() {
     return resultado;
 }
 
-console.log(generarCodigos())
 
 for (let i =0;i< 20; i++) {
     edades.push(Math.floor(Math.random() *100));
