@@ -1,6 +1,3 @@
-const readline =  require('readline');
-
-
 
 let numeros = []
 
@@ -11,7 +8,14 @@ function getNumeros(min, max) {
     }
 }
 
-getNumeros()
-console.log()
+getNumeros(-100,100)
 
+let numeroMenor  = Math.abs(numeros[0])
 
+for(i = 1; i < 49; i++){
+    if ( numeroMenor > Math.abs(numeros[i])){
+        numeroMenor = Math.abs(numeros[i])
+    }
+}
+
+console.log(`El numero menor: ${numeroMenor}`)
