@@ -1,11 +1,15 @@
-let ventas, salarioBruto,deducciones,salarioNeto, comisión
 
-function CalcularSalario(venta,salarioMensual) {
-    comisión = venta * 1500000
-    salarioBruto = salarioMensual + comisión
-    deducciones = salarioBruto * 0.05
-    salarioNeto = salarioBruto - deducciones
-    return `si el salario Mensual tiene un valor de:${salarioMensual} las comisión es de un valor de:${comisión} y  las deducciones es de:${deducciones} y el salario Mensual tiene un valor de:${salarioNeto}`
+const sablesdeLuzTotales = [1, -4, 2, -2, 5, -7, 8, -1];
+
+const sablesPositivos = [];
+const sablesNegativos = [];
+
+function calcularSables(){
+	sablesdeLuzTotales.forEach(num => {
+		num >= 0 ? 
+		sablesPositivos.push(num) :
+		sablesNegativos.push(num); 
+})
+	return "La cantidad de sables contada fue: " + sablesdeLuzTotales + " Los sables positivos fueron: " + sablesPositivos + " y los sables negativos fueron: " + sablesNegativos;
 }
-
-console.log(CalcularSalario(12,3500000))
+console.log(calcularSables())
