@@ -1,6 +1,6 @@
 
 let numeros = []
-
+let numerosFlecha = []
 function getNumeros(min, max) {
 
     for(i = 0; i <50; i++){
@@ -17,5 +17,21 @@ for(i = 1; i < 49; i++){
         numeroMenor = Math.abs(numeros[i])
     }
 }
-
 console.log(`El numero menor: ${numeroMenor}`)
+
+const getNumerosFlecha = (minFlecha, maxFlecha) =>{
+    
+    for(i = 0; i < 50; i++){
+        numerosFlecha.push(Math.floor(Math.random() * (maxFlecha - minFlecha) + maxFlecha));        
+    }
+}
+
+let numeroMenorFlecha = Math.abs(numerosFlecha[0])
+
+for(i= 1;i < 49; i++){
+    
+    if(numeroMenorFlecha > Math.abs(numerosFlecha[i])){
+        numeroMenorFlecha = Math.abs(numerosFlecha[i])
+    }
+}
+console.log(`El numero menor: ${numeroMenorFlecha}`)

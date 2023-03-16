@@ -79,3 +79,19 @@ function getPlanets(planetas){
 }
 
 getPlanets(mapas)
+
+const getPlanetsFlecha = (planeta) =>{
+    planetas.forEach(planeta => {
+        catidadAgua = catidadAgua + planeta.volumenAgua
+        if ( 0>= planeta.volumenAgua || planeta.catidadAgua === null ){
+            console.log(`el planeta no tiene agua, su nombre es: ${planeta.nombre}, su latitud es: ${planeta.latitud}, su longitud es: ${planeta.longitud}, su nivel de oxigeno es ${planeta.nivelOxigeno} su volumen de agua es ${planeta.volumenAgua}`)
+        }
+        catidadOxigeno = catidadOxigeno + planeta.nivelOxigeno
+        if(planeta.nivelOxigeno<0){
+            console.log(`el nivel de oxigen del planeta es negativo: ${planeta.nombre}, su latitud es: ${planeta.latitud}, su longitud es: ${planeta.longitud}, su nivel de oxigeno es ${planeta.nivelOxigeno} su volumen de agua es ${planeta.volumenAgua}`)
+        }
+    });
+    console.log(`La cantidad de oxieno total es de ${catidadOxigeno *100}`)
+}
+
+getPlanetsFlecha(mapas)
